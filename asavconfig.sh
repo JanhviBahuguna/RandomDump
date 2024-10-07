@@ -47,8 +47,9 @@ configure_client_nva_server_scenario() {
   echo "Ubuntu Client VM Start"
   add_route "$subnet1" "$gateway1"
   install_python_packages
+  curl -o configscript.py "$config_script"
   echo "Running python configuration script on the NVA"
-  $PYTHON "$config_script"
+  $PYTHON configscript.py
   echo "Ubuntu Client VM End"
 }
 
