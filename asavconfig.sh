@@ -31,7 +31,7 @@ add_route() {
   sudo apt install net-tools
   sudo apt install iperf3
   sudo crontab -l > cron_bkp
-  echo "*/1 * * * * sudo /sbin/route add -net $subnet gw $gateway > /var/log/nva.log 2>&1" >> cron_bkp
+  sudo echo "*/1 * * * * sudo /sbin/route add -net $subnet gw $gateway > /var/log/nva.log 2>&1" >> cron_bkp
   sudo crontab cron_bkp
   sudo rm cron_bkp
   route
