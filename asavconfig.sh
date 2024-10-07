@@ -28,8 +28,8 @@ add_route() {
   gateway=$2
 
   echo "*** Adding route to $subnet via $gateway ***"
-  sudo apt install net-tools
-  sudo apt install iperf3
+  sudo apt install -y net-tools
+  sudo apt install -y iperf3
   sudo crontab -l > cron_bkp
   sudo echo "*/1 * * * * sudo /sbin/route add -net $subnet gw $gateway > /var/log/nva.log 2>&1" >> cron_bkp
   sudo crontab cron_bkp
