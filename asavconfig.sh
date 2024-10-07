@@ -51,5 +51,5 @@ configure_client_nva_server_scenario() {
 }
 
 echo "***Configuring NVAs Started***"
-configure_client_nva_server_scenario "https://github.com/JanhviBahuguna/RandomDump/blob/main/configscript.py" "10.11.2.0/24" "10.11.1.1"
+configure_client_nva_server_scenario "https://raw.githubusercontent.com/JanhviBahuguna/RandomDump/refs/heads/main/configscript.py" "10.11.2.0/24" "10.11.1.1"
 echo "***Configuring NVAs Done***"
